@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+/* ---------navbar------------ */
+nav .navbar{
+  width: 80% !important;
+}
+
+ .nav-link {
+    position: relative;
+    
+}
+ .btn-close:hover{
+  outline: none ;
+  border: none ;
+}
+
+@media screen and (min-width:992px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background-color: #009970;
+        transition: 0.3s ease-in-out;
+        opacity: 0;
+    }
+
+    .nav-link:hover::before,
+    .nav-link.active::before {
+        width: 100%;
+        opacity: 1;  
+       
+    }
+
+}
+
+
+
+
+@media screen and (max-width:991px) {
+ 
+    .nav-link {
+        margin-left: 10px;
+        transition: background-color 0.3s ease-in-out,color 0.3s ease-in-out;
+    }
+
+    .nav-link:hover {
+      color:#009970 !important;
+       padding-left: 10px;
+        background-color: rgb(246, 245, 245);
+    }
+    
+    
+}
+
+@media screen and (max-width:360px){
+  nav .navbar{
+    width: 100% !important;
+
+  }
+  .offcanvas-header,.offcanvas-body,.offcanvas.offcanvas-end {
+    width: 70% !important;
+   
+    text-align: center;
+  }
+ .navbar-toggler {
+  
+  margin-right:188px ;
+ }
+  
+}
+/* ------------banner---------------- */
+#banner{
+    background-image: url("images/banner.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    
+}
+
+.row1{
+  height: 70vh;
+  position: relative;
+animation-name: example;
+animation-duration: 5s; 
+
+}
+
+
+@keyframes example {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+    /* from {left: -200px;}
+    to {left: 30px; } */
+  }
+.row h1,.row h3{
+    font-size: 4rem;
+   
+}
+
+
+
+/*------ button animation---------- */
+.btn {
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .btn span {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    display: inline-block;
+  }
+  
+  .btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  /* -------------shop by pet---------------- */
+.card-1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/lady\ and\ dog.png");
+
+}
+.card-2{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/lilgirl.png");
+
+}
+.card-1,.card-2{
+    height: 350px;
+   background-position:center;
+   background-size: cover;
+   outline: 5px white ridge;
+   
+
+}
+.card-1:hover,.card-2:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  transition: transform 1s ease-in; 
+}
+.card-1:hover .txt,.card-2:hover .txt {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  transition: transform 1s ease-in; 
+
+}
+
+/* ------------------products----------- */
+.card { 
+  width: 14rem; /* Adjust card width as needed */
+}
+.card-body{
+  height: 150px;
+}
+.card-img-top {
+  height: 240px;
+  margin-bottom: 30px;
+}
+
+.card p {
+  font-size: 12px;
+}
+
+
+.card-img {
+  position: relative;
+  opacity: 1;
+  width: 100%;
+  transition: .7s ease;
+}
+.icon{
+  opacity: 0;
+  transition: .7s ease;
+
+}
+.buy {
+  transition: .7s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  
+}
+
+.card:hover{
+ transform: translate(-10px,-10px);
+
+}
+
+.card:hover .buy 
+,.card:hover .icon{
+  opacity: 1;
+ 
+}
+/* -------------abou---------- */
+.gray{
+  background-image: url("./images/gray\ bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+.dog img,.cat img{
+  height: 400px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dog img:hover,
+.cat img:hover {
+  transform: translateY(-10px); 
+  filter: drop-shadow(10px 10px 20px rgba(8, 8, 8, 0.645)) 
+}
+.abt {
+  transition: all 0.5s ease-in-out;
+}
+
+
+.abt h1:hover,.abt p:hover
+  {
+  transform: scale(1.05);
+
+  color: #007399 !important; 
+}
+.abt h4:hover{
+  transform: scale(1.05);
+color: white !important;
+}
+/* -----------accordion------------ */
+
+.accordion-collapse,.accordion-header .accordion-button  {
+  background-color:rgba(235, 232, 232, 0.673); 
+  
+}
+.accordion-body{
+  border-bottom: 1px black solid;
+}
+/* -------------------bootstrap-icon-> + -> html code for svg -> url encoder for svg -> copy ready for css----------------- */
+/* Plus icon  */
+.accordion-button.collapsed::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3E%3C/svg%3E");
+  transition: 0.5s;
+}
+button.accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8'/%3E%3C/svg%3E");
+}
+
+
+#faq img{
+  outline: 3px ridge white;
+  padding: 10px;
+  height: 500px;
+  width: 98%;
+  margin: 15px;
+  transition:0.3s ease ;
+  cursor: pointer;
+}
+#faq img:hover{
+  transform: scale(0.9);
+  transition: transform 0.3s ease-in;
+}
+/* ---------footer--------- */
+footer a{
+  text-decoration: none;
+}
+footer p:hover{
+color: #009970;
+}
+footer,footer p{
+  font-size: 0.9em;
+}
+
+/* -----------------testimonial---------------------- */
+#testimonial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  
+}
+.test-card{
+  position: relative;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  color: #333;
+  text-align: left;
+}
+.test-card h1{
+  vertical-align: middle;
+}
+
+.test-card .test {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 25px 50px 30px 50px;
+  font-size: 0.9em;
+  font-weight: 500;
+  margin: 0;
+  font-style: italic;
+  line-height: 1.6em;
+  
+}
+
+.test-card:hover .test p{
+  animation-name:opacity;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }30%{
+    opacity: 0.3;
+  }75%{
+    opacity: 0.7;
+  }100%{
+    opacity: 1;
+  }
+}
+
+.test-card:hover .author {
+  transform: translateX(20px);
+  transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 3s, color 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.test-card:hover .author h5,.test-card:hover .author p {
+  color: #06916c;
+}
+.test-card .test::before{
+  top: 20px;
+  left: 20px;
+  content: "\201C";
+  position: absolute;
+  font-size: 70px;
+  font-weight: 900;
+}
+
+.test-card .arrow {
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fafafa;
+  margin: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+}
+
+.test-card .author {
+  position: absolute;
+  bottom: 30px;
+  padding: 0 10px 0 120px;
+  text-transform: uppercase;
+
+  transform: translateY(50%);
+}
+
+.test-card .author h5 {
+ 
+ 
+  font-weight: 800;
+  margin-right: 20px;
+}
+
+.test-card .author h5 p {
+  font-weight: 400;
+  font-size: 12px;
+  padding-left: 10px;
+
+}
+
+/* ---------media query--------- */
+
+@media screen and (max-width:726px) {
+  .row h1,.row h3{
+    font-size: 2rem;
+   
+}
+.dog{
+ margin-left: -50px;
+}
+.cat{
+  align-self: flex-start;
+}
+.abt p{
+  font-size: 1.1rem;
+  text-align: justify;
+}
+.test-card .author h5 {
+  font-weight: 500;
+  font-size: 20px;
+}
+.test-card .author p {
+font-size: 12px;
+
+}
+.test-card h1{
+  font-size: 50px;
+  vertical-align: middle;
+}
+
+.test-card .author {
+  
+  bottom: 30px;
+  transform: translateY(50%);
+}
+
+}

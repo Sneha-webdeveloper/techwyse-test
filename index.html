@@ -28,47 +28,43 @@
     
 <!-- navbar -->
 
-<nav class="navbar navbar-expand-lg fixed-top bg-white border border-bottom text-center ">
-    <div class="container-fluid">
-     <img src="./images/logo.png" alt="logo" class="navbar-brand me-auto" width="150px">
-      
-      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar"  aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-            <img src="./images/logo.png" alt="" class="w-50">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <nav class="navbar navbar-expand-lg  bg-white border border-bottom text-center ">
+      <div class="container-fluid">
+       <img src="./images/logo.png" alt="logo" class="navbar-brand me-auto" width="150px">
+        <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar"  aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+              <img src="./images/logo.png" alt="" class="w-50">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active text-uppercase fw-bolder" aria-current="page" href="#">Home</a>
+              </li>
+              
+              <li class="nav-item">
+                  <a class="nav-link text-uppercase fw-bolder mx-2" href="#">shop by pet</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase fw-bolder mx-2" href="#">Shop by Product</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase fw-bolder mx-2" href="#">new</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase fw-bolder mx-2" href="#">sale</a>
+                </li>
+            </ul>
+          <a href="#" class="text-decoration-none text-dark fw-bold mx-md-3"><img src="./images/headphone.png" alt="headphone" class="p-2 rounded-circle bg-success">&nbsp;912-330-8852</a> <!-- phone no -->
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-evenly flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active text-uppercase fw-bolder" aria-current="page" href="#">Home</a>
-            </li>
-            
-            <li class="nav-item">
-                <a class="nav-link text-uppercase fw-bolder mx-2" href="#">shop by pet</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase fw-bolder mx-2" href="#">Shop by Product</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase fw-bolder mx-2" href="#">new</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-uppercase fw-bolder mx-2" href="#">sale</a>
-              </li>
-          </ul>
-               <!-- phone no -->
-     
-        <a href="#" class="text-decoration-none text-dark fw-bold mx-md-3"><img src="./images/headphone.png" alt="headphone" class="p-2 rounded-circle bg-success">&nbsp;912-330-8852</a>
-
-        </div>
+        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-  </nav>
-
+    </nav>
+  
 <!-- banner -->
 
 <section id="banner" >
@@ -206,8 +202,8 @@
 <!-- ----------about------------ -->
 
 <div class="container-fluid gray ">
-<div class="row text-center d-flex align-items-center justify-content-center flex-lg-row flex-column ">
-  <div class="dog col-lg-3  col-12 "><img src="./images/dog.png" alt=""></div>
+<div class="row text-center  ">
+  <div class="dog col-lg-3 col-6 "><img src="./images/dog.png" alt=""></div>
 
 
 <div class="abt col-lg-5 col-12 mt-5 ">
@@ -215,7 +211,7 @@
 <h1 class="fw-bolder text-white">PET STUFF</h1>
 <p class="fw-medium text-white ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate sequi vero ipsum quibusdam consequuntur modi ratione iste et a, vitae nulla quaerat nesciunt, deserunt reprehenderit praesentium ut quia quasi beatae.</p>
 </div>
-<div class="col-lg-4 col-12 cat ">
+<div class="col-3  cat ">
   <img src="./images/cat.png" alt=""  >
 </div>
 
@@ -361,11 +357,11 @@
 
   <!-- Section: Links  -->
   <section class="">
-    <div class="container-fluid text-center text-md-start mt-5 ms-2">
+    <div class="container text-center text-md-start mt-5 ms-2">
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4 col-4">
           <!-- Content -->
           <img src="./images//logo.png" alt="logo" width="150px">
           <p>
@@ -375,7 +371,7 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-1 col-lg-2 col-xl-2 mx-auto mb- fw-bolder ">
+        <div class="col-md-1 col-lg-2 col-xl-2 mx-auto mb- fw-bolder col-4">
           <!-- Links -->
           
           <p>
@@ -394,7 +390,7 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-1 col-lg-2 col-xl-2 mx-auto mb-4 fw-bolder">
+        <div class="col-md-1 col-lg-2 col-xl-2 col-4 mx-auto mb-4 fw-bolder">
           <!-- Links -->
           
           <p>
@@ -413,7 +409,7 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4 fw-medium fs-6 px-3">
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-md-0 mb-4 fw-medium fs-6 px-3 col-6 ">
           <!-- Links -->
           
           <p><i class="fas fa-location-dot me-3"></i> 473 Pooler Parkway <br>Pooler,GA,31322</p>
@@ -425,12 +421,12 @@
 
         <!-- Grid column -->
 
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 col-6">
           <!-- Links -->
           
 <div class="row">
-  <div class="col-4">
-               <span>Hours of operation </span>  
+  <div class="col-5">
+               <span style="font-size: 14px;font-weight: bolder;">Hours of operation </span>  
     
   </div><div class="col-7 border-secondary border-start-3 border border-top-0 border-end-0 border-bottom-0">
                 

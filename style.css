@@ -3,20 +3,25 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    /* border: 2px solid black; */
 }
 
 /* ---------navbar------------ */
 nav .navbar{
-  width: 80% !important;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
  .nav-link {
     position: relative;
     
 }
- .btn-close:hover{
+ .btn-close:hover, .navbar-toggler:hover,.navbar-toggler:focus{
+  background-color: white;
   outline: none ;
   border: none ;
+  box-shadow: none;
 }
 
 @media screen and (min-width:992px) {
@@ -53,6 +58,7 @@ nav .navbar{
     }
 
     .nav-link:hover {
+      text-align: start;
       color:#009970 !important;
        padding-left: 10px;
         background-color: rgb(246, 245, 245);
@@ -61,22 +67,28 @@ nav .navbar{
     
 }
 
-@media screen and (max-width:360px){
+/* @media screen and (max-width:360px){
   nav .navbar{
-    width: 100% !important;
-
+    width: 70% !important;
+    position: fixed;
+    top: 0px;
+    overflow-x: hidden;
+    right:0px;
+    height: 100vh;
   }
   .offcanvas-header,.offcanvas-body,.offcanvas.offcanvas-end {
     width: 70% !important;
-   
-    text-align: center;
+    right: 0;
+    text-align:left
   }
  .navbar-toggler {
   
   margin-right:188px ;
  }
   
-}
+} */
+
+
 /* ------------banner---------------- */
 #banner{
     background-image: url("images/banner.png");
@@ -162,12 +174,12 @@ animation-duration: 5s;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 
-  transition: transform 1s ease-in; 
+  transition: transform 0.5s ease-in; 
 }
 .card-1:hover .txt,.card-2:hover .txt {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  transition: transform 1s ease-in; 
+  transition: transform 0.5s ease-in; 
 
 }
 
@@ -262,7 +274,7 @@ color: white !important;
   border-bottom: 1px black solid;
 }
 /* -------------------bootstrap-icon-> + -> html code for svg -> url encoder for svg -> copy ready for css----------------- */
-/* Plus icon  */
+
 .accordion-button.collapsed::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4'/%3E%3C/svg%3E");
   transition: 0.5s;
@@ -283,7 +295,7 @@ button.accordion-button:not(.collapsed)::after {
 }
 #faq img:hover{
   transform: scale(0.9);
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease;
 }
 /* ---------footer--------- */
 footer a{
@@ -332,16 +344,15 @@ footer,footer p{
 
 .test-card:hover .test p{
   animation-name:opacity;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 @keyframes opacity {
   0%{
     opacity: 0;
-  }30%{
-    opacity: 0.3;
-  }75%{
-    opacity: 0.7;
+  
+  }50%{
+    opacity: 0.5;
   }100%{
     opacity: 1;
   }
@@ -405,9 +416,6 @@ footer,footer p{
   .row h1,.row h3{
     font-size: 2rem;
    
-}
-.dog{
- margin-left: -50px;
 }
 .cat{
   align-self: flex-start;
